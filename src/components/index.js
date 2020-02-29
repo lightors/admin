@@ -1,0 +1,5 @@
+export var myheader = () => import('./header')
+export var left = () => import('./Left')
+export var chartspie = ()=> import('./echarts/pie')
+export var chartscolumn = ()=> import('./echarts/column')
+export var chartsline = ()=> import('./echarts/line')

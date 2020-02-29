@@ -1,32 +1,64 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <myheader></myheader>
+    <section style="display: flex;flex: 1;">
+      <div style="background-color: #333;">
+        <left @collapse="leftcollapse"></left>
+      </div>
+
+      <article :style="{width:'calc(100vw - '+leftW+'px)'}"
+               style="padding:10px;box-sizing: border-box">
+        <el-breadcrumb separator-class="el-icon-arrow-right" style="margin: 15px 0;">
+          <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
+          <el-breadcrumb-item><a href="/">用户管理</a></el-breadcrumb-item>
+          <el-breadcrumb-item>用户列表</el-breadcrumb-item>
+        </el-breadcrumb>
+        <router-view></router-view>
+      </article>
+    </section>
   </div>
 </template>
 
+<script>
+  import {myheader,left} from './components'
+
+  export default {
+    name: "Home",
+    data() {
+      return {
+        leftW:201
+      }
+    },
+
+    components: {
+      myheader,
+      left,
+    },
+    methods: {
+      leftcollapse(val) {
+        if(val) {
+          this.leftW = val? 65:201;
+        }
+      },
+      handleEdit(index, row) {
+        console.log(index, row);
+      },
+      handleDelete(index, row) {
+        console.log(index, row);
+      }
+    }
+  }
+</script>
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+  * {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  #app {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    /*text-align: center;*/
+  }
 </style>
