@@ -1,4 +1,4 @@
-# wenhao-admin
+# 仿教务管理系统-admin
 
 ## Project setup
 ```
