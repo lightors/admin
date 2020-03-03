@@ -9,40 +9,45 @@
             text-color="#fff" active-text-color="yellow">
       <h2 style="color: white ">
         <i class="el-icon-share"></i>
-
       </h2>
-      <el-menu-item index="1" route="/">
-        <i class="el-icon-date"></i>
-        <span slot="title">我的选课</span>
-      </el-menu-item>
+      <el-submenu index="1">
+        <template slot="title">
+          <i class="el-icon-date"></i>
+          <span slot="title">我的选课</span>
+        </template>
+        <el-menu-item-group>
+          <el-menu-item index="2-1" route="/cschedules">班级课表</el-menu-item>
+          <el-menu-item index="2-2" route="/pschedules">个人课表</el-menu-item>
+          <el-menu-item index="2-3">选课中心</el-menu-item>
+        </el-menu-item-group>
+      </el-submenu>
       <el-submenu index="2">
         <template slot="title">
           <i class="el-icon-search"></i>
           <span slot="title">教室查询</span>
         </template>
         <el-menu-item-group>
-          <el-menu-item index="2-1" route="/user">用户列表</el-menu-item>
-          <el-menu-item index="2-2">选项2</el-menu-item>
-        </el-menu-item-group>
-        <el-menu-item-group>
-          <el-menu-item index="2-3">选项3</el-menu-item>
+          <el-menu-item index="2-1" route="/user">空教室查看</el-menu-item>
+          <el-menu-item index="2-2">教室借用</el-menu-item>
         </el-menu-item-group>
       </el-submenu>
-      <el-menu-item index="3">
-        <i class="el-icon-folder-checked"></i>
-        <span slot="title">我的成绩</span>
-      </el-menu-item>
+      <el-submenu index="3">
+        <template slot="title">
+          <i class="el-icon-folder-checked"></i>
+          <span slot="title">我的成绩</span>
+        </template>
+        <el-menu-item-group>
+          <el-menu-item index="2-1" route="/user">成绩查看</el-menu-item>
+        </el-menu-item-group>
+      </el-submenu>
       <el-submenu index="4">
         <template slot="title">
           <i class="el-icon-notebook-2"></i>
           <span slot="title">考试信息</span>
         </template>
         <el-menu-item-group>
-          <el-menu-item index="2-1" route="/user">用户列表</el-menu-item>
-          <el-menu-item index="2-2">选项2</el-menu-item>
-        </el-menu-item-group>
-        <el-menu-item-group>
-          <el-menu-item index="2-3">选项3</el-menu-item>
+          <el-menu-item index="2-1" route="/user">考试安排</el-menu-item>
+          <el-menu-item index="2-3">考级报名</el-menu-item>
         </el-menu-item-group>
       </el-submenu>
       <el-submenu index="5">
@@ -51,11 +56,8 @@
           <span slot="title">培养方案</span>
         </template>
         <el-menu-item-group>
-          <el-menu-item index="2-1" route="/user">用户列表</el-menu-item>
-          <el-menu-item index="2-2">选项2</el-menu-item>
-        </el-menu-item-group>
-        <el-menu-item-group>
-          <el-menu-item index="2-3">选项3</el-menu-item>
+          <el-menu-item index="2-1" route="/user">专业计划</el-menu-item>
+          <el-menu-item index="2-3">学业进度</el-menu-item>
         </el-menu-item-group>
       </el-submenu>
       <el-submenu index="6">
@@ -64,11 +66,8 @@
           <span slot="title">学籍信息</span>
         </template>
         <el-menu-item-group>
-          <el-menu-item index="2-1" route="/user">用户列表</el-menu-item>
-          <el-menu-item index="2-2">选项2</el-menu-item>
-        </el-menu-item-group>
-        <el-menu-item-group>
-          <el-menu-item index="2-3">选项3</el-menu-item>
+          <el-menu-item index="2-1" route="/user">学籍卡片</el-menu-item>
+          <el-menu-item index="2-3">个人信息</el-menu-item>
         </el-menu-item-group>
       </el-submenu>
       <el-submenu index="7">
@@ -77,11 +76,7 @@
           <span slot="title">公共信息</span>
         </template>
         <el-menu-item-group>
-          <el-menu-item index="2-1" route="/user">用户列表</el-menu-item>
-          <el-menu-item index="2-2">选项2</el-menu-item>
-        </el-menu-item-group>
-        <el-menu-item-group>
-          <el-menu-item index="2-3">选项3</el-menu-item>
+          <el-menu-item index="2-1" route="/user">教学周历</el-menu-item>
         </el-menu-item-group>
       </el-submenu>
       <el-submenu index="8">
@@ -90,11 +85,7 @@
           <span slot="title">评教系统</span>
         </template>
         <el-menu-item-group>
-          <el-menu-item index="2-1" route="/user">用户列表</el-menu-item>
-          <el-menu-item index="2-2">选项2</el-menu-item>
-        </el-menu-item-group>
-        <el-menu-item-group>
-          <el-menu-item index="2-3">选项3</el-menu-item>
+          <el-menu-item index="2-1" route="/user">学生教学评价</el-menu-item>
         </el-menu-item-group>
       </el-submenu>
     </el-menu>

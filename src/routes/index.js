@@ -12,7 +12,15 @@ const router = new VueRouter({
     {
       path:'/user',
       component:()=>import("@/views/user/userList.vue")
-    }
+    },
+    {
+      path:'/pschedules',
+      component:()=>import("@/views/schedules/personSchedules.vue")
+    },
+    {
+      path:'/cschedules',
+      component:()=>import("@/views/schedules/classSchedules.vue")
+    },
   ]
 })
 
