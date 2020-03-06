@@ -1,6 +1,5 @@
 # 仿教务管理系统-admin
-<a herf="http://106.54.82.49/admin/index.html#/ target="_blank"">1</a>
-## Project setup
+http://106.54.82.49/admin/index.html#/ 
 ```
 npm install
 ```
