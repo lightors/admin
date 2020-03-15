@@ -1,6 +1,5 @@
 # 仿教务管理系统-admin
-http://lightor.wicp.top/admin/index.html#/
-## Project setup
+http://106.54.82.49/admin/index.html#/ 
 ```
 npm install
 ```
