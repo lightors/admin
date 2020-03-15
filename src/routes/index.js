@@ -21,6 +21,10 @@ const router = new VueRouter({
       path:'/cschedules',
       component:()=>import("@/views/schedules/classSchedules.vue")
     },
+    {
+      path:'/rating',
+      component:()=>import("@/views/ratings/Ratings.vue")
+    },
   ]
 })
 

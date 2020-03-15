@@ -16,13 +16,13 @@
 </template>
 
 <script>
-  import {myHeader,left,Tabs} from './components'
+  import {myHeader, left, Tabs} from './components'
 
   export default {
     name: "Home",
     data() {
       return {
-        leftW:201
+        leftW: 201
       }
     },
 
@@ -33,8 +33,8 @@
     },
     methods: {
       leftcollapse(val) {
-        if(val) {
-          this.leftW = val? 65:201;
+        if (val) {
+          this.leftW = val ? 65 : 201;
         }
       },
       handleEdit(index, row) {
@@ -52,10 +52,12 @@
     margin: 0;
     list-style: none;
   }
+
   #app {
     display: flex;
     height: 100vh;
     flex-direction: column;
-    /*text-align: center;*/
+
   }
+
 </style>

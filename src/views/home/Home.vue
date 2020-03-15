@@ -47,7 +47,7 @@
         </el-card>
       </el-col>
 
-      <el-col :span="4">
+      <el-col :span="4" class="weather">
         <iframe allowtransparency="true" frameborder="0"
                 width="140" height="128" scrolling="no"
                 src="//tianqi.2345.com/plugin/widget/index.htm?s=1&z=1&t=1&v=1&d=1&bd=0&k=000000&f=0080ff&ltf=009944&htf=cc0000&q=1&e=1&a=1&c=54511&w=140&h=128&align=center"></iframe>
@@ -120,5 +120,12 @@
     color: orangered;
     font-size: 30px;
     padding: 0 10px;
+  }
+
+
+  @media (max-width: 500px) {
+    .weather {
+      display: none;
+    }
   }
 </style>
